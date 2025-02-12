@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { useRef } from "react";
 import createHearts from "./createHearts";
 import useWindowDimensions from "./useWindowDimensions";
+import Image from "next/image";
 
 const heartEmojis = [
   "❤️",
@@ -89,9 +90,12 @@ export const YesPage = () => {
           Yay! You made me the happiest! 💕
         </h1>
         <div className="flex justify-center">
-          <img
+          <Image
+            width={500}
+            height={500}
             src="https://media4.giphy.com/media/9XY4f3FgFTT4QlaYqa/giphy.gif"
             className="max-w-full h-auto "
+            alt="yes-gif"
           />
         </div>
       </div>

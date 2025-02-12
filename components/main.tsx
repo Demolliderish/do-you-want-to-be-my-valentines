@@ -6,6 +6,7 @@ import gsap from "gsap";
 import createHearts from "./createHearts";
 import { useRouter } from "next/navigation";
 import { useGSAP } from "@gsap/react";
+import Image from "next/image";
 
 const messages = [
   "Are you sure?",
@@ -30,7 +31,7 @@ const gifs = [
 
 export const MainPage = () => {
   const [messageIndex, setMessageIndex] = useState(0);
-  const [noMessage, setNoMessage] = useState<String | null>(null);
+  const [noMessage, setNoMessage] = useState<string | null>(null);
   const [gifIndex, setGifIndex] = useState(0);
   const { push } = useRouter();
   const heartContainer = useRef<HTMLDivElement>(null);
@@ -167,7 +168,9 @@ export const MainPage = () => {
           </button>
         </div>
         <div className="h-[20vh] mt-[20px]">
-          <img
+          <Image
+            width={500}
+            height={500}
             src={gifs[gifIndex]}
             alt="Cute GIF"
             id="animated-gif"

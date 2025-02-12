@@ -4,12 +4,12 @@ function createHearts({
   emoji = "💖",
   heartContainer,
   height,
-  repeat = false
+  repeat = false,
 }: {
   emoji?: string;
   heartContainer?: HTMLElement;
   height?: number;
-  repeat?: boolean
+  repeat?: boolean;
 }) {
   if (!heartContainer || !height) {
     return;
@@ -34,12 +34,14 @@ function createHearts({
       ease: "power1.out",
       onComplete: () => {
         heart.remove();
-        repeat && createHearts({
-          emoji,
-          heartContainer,
-          height,
-          repeat
-        });
+        if (repeat) {
+          createHearts({
+            emoji,
+            heartContainer,
+            height,
+            repeat,
+          });
+        }
       },
     }
   );

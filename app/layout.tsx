@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Pacifico } from "next/font/google";
 import "./globals.css";
 import ChocolateGrid from "@/components/chocolate-grid";
-import { CursorifyProvider } from "@cursorify/react";
 import EmojiCursor from "@/components/emoji-cursor";
 
 const geistSans = Geist({
