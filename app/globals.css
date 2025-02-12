@@ -2,20 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #f9e3e3;
+  font-family: "Pacifico", cursive;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 3em;
+  color: #d32f2f;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Chocolate Grid Styles */
+.chocolate-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  gap: 2px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.chocolate-cell {
+  background-color: #f9b3cb; /* Pink color */
+  aspect-ratio: 1;
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  pointer-events: auto;
+}
+
+.mini-heart {
+  width: 80px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.hearts {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hearts span {
+  position: absolute;
+  font-size: 2em;
+}
+
+.yes-btn {
+  transition: all 0.3s ease;
+}
+
+.yes-btn:hover {
+  background-color: #45a049;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  transform: scale(1.1) rotate(-3deg);
+
 }
