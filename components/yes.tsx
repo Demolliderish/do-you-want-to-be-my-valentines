@@ -5,7 +5,6 @@ import gsap from "gsap";
 import { useRef } from "react";
 import createHearts from "./createHearts";
 import useWindowDimensions from "./useWindowDimensions";
-import Image from "next/image";
 
 const heartEmojis = [
   "❤️",

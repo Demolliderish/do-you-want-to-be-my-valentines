@@ -6,7 +6,6 @@ import gsap from "gsap";
 import createHearts from "./createHearts";
 import { useRouter } from "next/navigation";
 import { useGSAP } from "@gsap/react";
-import Image from "next/image";
 
 const messages = [
   "Are you sure?",
