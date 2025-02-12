@@ -168,7 +168,7 @@ export const MainPage = () => {
           </button>
         </div>
         <div className="h-[20vh] mt-[20px]">
-          <Image
+          <img
             width={500}
             height={500}
             src={gifs[gifIndex]}

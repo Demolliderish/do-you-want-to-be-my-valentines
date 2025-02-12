@@ -90,7 +90,7 @@ export const YesPage = () => {
           Yay! You made me the happiest! 💕
         </h1>
         <div className="flex justify-center">
-          <Image
+          <img
             width={500}
             height={500}
             src="https://media4.giphy.com/media/9XY4f3FgFTT4QlaYqa/giphy.gif"
